@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real Phone</title>
+    <link rel="stylesheet" href="Css Files/Styles.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="Assets/images/logo.png" alt="Real Phone logo">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Phone</a></li>
+                    <li><a href="">Accessories</a></li>
+                    <li><a href="">Cart</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="Assets/images/mobile.png" alt="mobile-phone" class="mobile">
+            <div id="circle">
+                <div class="feature one">
+                    <img src="Assets/images/camera.png" alt="white-camera-icon">
+                    <div>
+                        <h1>Camera</h1>
+                        <p>12MP, Wide Angle Lens</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="Assets/images/processor.png" alt="white-processor-icon">
+                    <div>
+                        <h1>Processor</h1>
+                        <p>Intel i7, X Genration, Octa-core, 11nm</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="Assets/images/display.png" alt="white-display-icon">
+                    <div>
+                        <h1>Display</h1>
+                        <p>6.5" Mini-Drop FullScreen</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="Assets/images/battery.png" alt="white-battery-icon">
+                    <div>
+                        <h1>Battery</h1>
+                        <p>5000mAh, 720hrs standBy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <img src="Assets/images/arrow.png" alt="white-arrows" id="upBtn">
+            <h1>Features</h1>
+            <img src="Assets/images/arrow.png" alt="white-arrows" id="downBtn">
+        </div>
+
+    </div>
+
+    <script>
+        var circle = document.getElementById("circle");
+        var upBtn = document.getElementById("upBtn");
+        var downBtn = document.getElementById("downBtn");
+
+        var angle = 0;
+
+        // the function to rotate the circle
+        upBtn.onclick = function(){
+            angle -= 90;
+            circle.style.transform = 'rotate(' + angle.toString(10)+'deg)';
+            rotateVal = rotateSum;
+        }
+        downBtn.onclick = function(){
+            angle += 90;
+            circle.style.transform = 'rotate(' + angle.toString(10)+'deg)';
+            rotateVal = rotateSum;
+        }
+    </script>
+</body>
+</html>
